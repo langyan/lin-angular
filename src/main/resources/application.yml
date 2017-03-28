@@ -1,5 +1,8 @@
 server:
   port: 8080
+security:
+  user:
+    password: password
 spring:
   session:
     store-type: redis
