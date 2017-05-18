@@ -2,3 +2,11 @@
 1. npm install bower -g
 2. npm install
 3. bower install
+
+
+npm install jquery --save
+npm install angular --save
+npm install bootstrap@3  --save
+
+
+npm run 
