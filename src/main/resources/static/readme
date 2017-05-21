@@ -3,10 +3,13 @@
 2. npm install
 3. bower install
 
+npm install webpack  --save-dev  
+
 
 npm install jquery --save
 npm install angular --save
 npm install bootstrap@3  --save
+npm install angular@3  --save
 
 
-npm run 
+npm run dev-server
