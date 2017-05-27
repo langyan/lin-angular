@@ -1,6 +1,6 @@
 import template from './some-component.tpl.html'
 
-export default function() {
+export default function () {
 
     return {
         scope: {},

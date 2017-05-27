@@ -46,7 +46,7 @@ us manage and test the application.
 * We get the Angular code via `bower`, a [client-side code package manager][bower].
 * In order to run the end-to-end tests, you will also need to have the
   [Java Development Kit (JDK)][jdk] installed on your machine. Check out the section on
-  [end-to-end testing](#e2e-testing) for more info.
+   for more info.
 
 We have preconfigured `npm` to automatically run `bower` so we can simply do:
 
@@ -295,19 +295,16 @@ For more information on AngularJS please check out [angularjs.org][angularjs].
 [travis-docs]: https://docs.travis-ci.com/user/getting-started
 
 ## custom
-npm install webpack --save-dev
-npm install html-webpack-plugin --save-dev
-npm install extract-text-webpack-plugin --save-dev
+
+
+
 npm install autoprefixer --save-dev
-npm install babel-loader --save-dev
-npm install css-loader --save-dev
-npm install style-loader --save-dev
-npm install url-loader --save-dev
-npm install raw-loader --save-dev
-npm install file-loader --save-dev
-npm install --save-dev  webpack-dev-server
-npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
-npm install --save-dev style-loader css-loader
+
+
+npm install webpack webpack-dev-server html-webpack-plugin  extract-text-webpack-plugin --save-dev
+npm install html-loader css-loader style-loader file-loader url-loader --save-dev
+npm install babel-core babel-preset-env babel-loader babel-preset-stage-2 --save-dev
+npm install eslint eslint-config-enough eslint-loader babel-eslint --save-dev
 
 npm install angular --save
 npm install angular-route --save
