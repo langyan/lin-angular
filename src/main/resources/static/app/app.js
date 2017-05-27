@@ -1,10 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './app.css';
-
-import bootstrap from 'bootstrap';
-
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
 
 import { routing, routingEventsLogger } from './app.config';
 
@@ -20,7 +18,5 @@ const app = angular
     .config(routing);
 
 if (DEBUG) {
-    app
-        .run(routingEventsLogger)
-    ;
+  app.run(routingEventsLogger);
 }

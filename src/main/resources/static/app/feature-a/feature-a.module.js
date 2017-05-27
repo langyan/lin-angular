@@ -1,7 +1,7 @@
 import angular from 'angular';
 
-import {routing} from './feature-a.config.js';
-import FeatureACtrl from './feature-a.ctrl.js';
+import { routing } from './feature-a.config';
+import FeatureACtrl from './feature-a.ctrl';
 
 export default angular.module('app.feature-a', [])
     .config(routing)

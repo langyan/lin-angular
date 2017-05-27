@@ -1,7 +1,5 @@
 export default function FeatureACtrl() {
+  const vm = this;
 
-    const vm = this;
-
-    vm.property = 'My Controller Property';
-
+  vm.property = 'My Controller Property';
 }

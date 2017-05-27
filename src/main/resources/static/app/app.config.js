@@ -1,38 +1,34 @@
 export function routing($urlRouterProvider, $stateProvider) {
+  $urlRouterProvider.otherwise('/feature-a');
 
-    $urlRouterProvider.otherwise('/feature-a');
-
-    $stateProvider
+  $stateProvider
         .state('app', {
-            abstract: true,
-            template: '<div ui-view></div>'
-        })
-
+          abstract: true,
+          template: '<div ui-view></div>',
+        });
 }
 
 export function routingEventsLogger($rootScope) {
+  const ROUTING_EVENTS = [
+    '$stateChangeStart',
+    '$stateChangeSuccess',
+    '$stateChangeError',
+  ];
 
-    const ROUTING_EVENTS = [
-        '$stateChangeStart',
-        '$stateChangeSuccess',
-        '$stateChangeError'
-    ];
+  const VIEW_EVENTS = [
+    '$viewContentLoading',
+    '$viewContentLoaded',
+  ];
 
-    const VIEW_EVENTS = [
-        '$viewContentLoading',
-        '$viewContentLoaded'
-    ];
-
-    ROUTING_EVENTS.forEach(function(routingEvent) {
-        $rootScope.$on(routingEvent, function(event, toState, toParams, fromState, fromParams, error){
-            console.log(routingEvent, event, toState, toParams, fromState, fromParams);
-        });
+  ROUTING_EVENTS.forEach((routingEvent) => {
+    $rootScope.$on(routingEvent, (event, toState, toParams, fromState, fromParams, error) => {
+      console.log(routingEvent, event, toState, toParams, fromState, fromParams);
     });
+  });
 
-    VIEW_EVENTS.forEach(function(viewEvent) {
-        $rootScope.$on(viewEvent, function(event, viewConfig){
-            console.log(viewEvent, event, viewConfig);
-        });
+  VIEW_EVENTS.forEach((viewEvent) => {
+    $rootScope.$on(viewEvent, (event, viewConfig) => {
+      console.log(viewEvent, event, viewConfig);
     });
-
+  });
 }
