@@ -298,13 +298,14 @@ For more information on AngularJS please check out [angularjs.org][angularjs].
 
 
 
-npm install autoprefixer --save-dev
+npm install postcss-loader autoprefixer --save-dev
 
 
 npm install webpack webpack-dev-server html-webpack-plugin  extract-text-webpack-plugin --save-dev
 npm install html-loader css-loader style-loader file-loader url-loader --save-dev
 npm install babel-core babel-preset-env babel-loader babel-preset-stage-2 --save-dev
 npm install eslint eslint-config-enough eslint-loader babel-eslint --save-dev
+npm install eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y  --save-dev
 
 npm install angular --save
 npm install angular-route --save

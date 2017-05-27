@@ -62,7 +62,7 @@ module.exports = {
         css-loader将css内容存为js字符串, 并且会把background, @font-face等引用的图片,
         字体文件交给指定的loader打包, 类似上面的html-loader, 用什么loader同样在loaders对象中定义, 等会下面就会看到.
         */
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
 
       {
