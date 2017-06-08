@@ -48,8 +48,12 @@ public class AngularApplication {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             // @formatter:off
-            http.httpBasic().and().authorizeRequests().antMatchers("/index.html", "/").permitAll().anyRequest()
-                    .hasRole("USER");
+//            http.httpBasic().and().authorizeRequests().antMatchers("/index.html", "/").permitAll().anyRequest()
+//                    .hasRole("USER");
+            
+            http.anonymous();
+       
+
             // @formatter:on
         }
     }

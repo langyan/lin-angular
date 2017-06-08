@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<h3 class="page-header">产品管理</h3>
+<form class="form-horizontal" >
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="productType" class="col-sm-3 control-label">产品类别：</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="productType" ng-model="ctrl.productType"
+                       placeholder="产品类别">
+            </div>
+        </div>
+
+        <div class="col-md-6 form-group">
+            <label for="productName" class="col-sm-3 control-label">产品名称：</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="productName"
+                       placeholder="产品名称"  ng-model="ctrl.productName">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button id="searchBtn" type="button" class="btn btn-primary" ng-click="ctrl.query()">查询</button>
+    </div>
+</form>
+<h4 class="sub-header">商品列表</h4>
+
+<div class="btn-group grid-bar">
+    <button type="button" class="btn btn-primary" ng-click="ctrl.add()">添加</button>
+    <button type="button" class="btn btn-primary" ng-click="ctrl.modify()">修改</button>
+    <button type="button" class="btn btn-primary" ng-click="ctrl.deleted()">删除</button>
+</div>
+
+
+<div ui-grid="ctrl.gridOptions" ui-grid-pagination
+     class="grid"></div>
+
+
+

@@ -315,6 +315,8 @@ npm install angular-mocks --save
 npm install html5-boilerplate --save
 npm install bootstrap --save
 npm install jquery --save
+npm install angular-ui-grid --save
+npm install angular-ui-bootstrap --save
 
 
 
